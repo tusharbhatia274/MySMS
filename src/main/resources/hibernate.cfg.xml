@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+       
+       <hibernate-configuration>
+       		<session-factory>
+       			<property name = "hibernate.dialect">
+           			org.hibernate.dialect.MySQLDialect
+      			</property>
+     			<property name = "hibernate.connection.driver_class">
+        			com.mysql.jdbc.Driver
+	      		</property>
+	            <property name = "hibernate.connection.url">
+			    	jdbc:mysql://localhost:3306/info
+			    </property>
+			    <property name = "hibernate.connection.username">
+			    	root
+			    </property>
+			    <property name = "hibernate.connection.password">
+			    	root
+			    </property>
+			    <property name="hibernate.hbm2ddl.auto">update</property>
+			      
+			    <mapping class = "com.mysms.daomodel.LoginSignupDao"/> 
+			    <mapping class = "com.mysms.daomodel.MenuDao"/>
+			    <mapping class = "com.mysms.daomodel.MessageSendingDao"/>
+			    <mapping class = "com.mysms.dtomodel.AddFriendDto"/>
+			    <mapping class = "com.mysms.dtomodel.AddGroupDto"/>
+			    
+       		</session-factory>
+       </hibernate-configuration>
